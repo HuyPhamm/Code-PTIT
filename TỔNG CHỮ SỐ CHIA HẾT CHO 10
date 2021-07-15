@@ -1,0 +1,24 @@
+#include<stdio.h>
+int main()
+{
+	int a;
+	scanf("%d",&a);
+	while(a--)
+	{
+		int n;
+		scanf("%d",&n);
+		int i;
+		int s=0;
+		while(n>0)
+		{
+			i=n%10;
+			s+=i;
+			n/=10;
+		}
+		if(s%10==0)
+		printf("YES\n");
+		else
+		printf("NO\n");
+
+	}
+}
