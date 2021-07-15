@@ -1,0 +1,37 @@
+#include<stdio.h>
+void nhap(int a[],int b[],int n)
+{
+	for(int i=0;i<n;i++)
+	scanf("%d",&a[i]);
+	for(int i=0;i<n;i++)
+		b[i]=1;
+}
+void dem(int a[],int b[],int n)
+{
+	for(int i=0;i<n;i++)
+	{
+		int count=1;
+		if(b[i]==1)
+		{	
+			b[i]=1;
+			for(int j=i+1;j<n;j++)
+			{
+				if(a[i]==a[j])
+				{
+					count++;
+					b[j]=0;
+				}
+			}
+			printf("%d %d\n",a[i],count);
+		}
+	}	
+}
+int main()
+{
+	int n;
+	scanf("%d",&n);
+	int a[100];
+	int b[100];
+	nhap(a,b,n);
+	dem(a,b,n);
+}
