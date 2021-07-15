@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main()
+{
+	int n,a;
+	int s=0;
+	scanf("%d",&n);
+	for (;n!=0;)
+	{
+		a=n%10;
+		s += a;
+		n /= 10;
+	}
+	printf("%d",s);
+	
+}
