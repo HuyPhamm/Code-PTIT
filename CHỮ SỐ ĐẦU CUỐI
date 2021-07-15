@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main() {
+    int d;
+    int c;
+    int n;
+    scanf("%d",&n);
+    c = n%10;
+    do {
+        d = n % 10;
+        n /= 10;
+        
+    }
+    while (n > 0);
+    printf ("%d %d",d,c);
+}
